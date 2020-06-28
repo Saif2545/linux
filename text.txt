@@ -61,3 +61,43 @@ commit f7b236f2b9716904f8218cbb81006d9ed2e073e8 (HEAD -> master)
 Author: EC2 Default User <ec2-user@ip-172-31-33-119.us-east-2.compute.internal>
 Date:   Sun Jun 28 16:29:41 2020 +0000
 
+
+-------------------------------------------------------
+
+    text file added
+[ec2-user@ip-172-31-33-119 linux]$ nano text.txt
+[ec2-user@ip-172-31-33-119 linux]$ git add .
+[ec2-user@ip-172-31-33-119 linux]$ git commit -m"ver 1 command untill adding text"
+[master ae9d25c] ver 1 command untill adding text
+ Committer: EC2 Default User <ec2-user@ip-172-31-33-119.us-east-2.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 63 insertions(+)
+ create mode 100644 text.txt
+[ec2-user@ip-172-31-33-119 linux]$ git remote add origin https://github.com/Saif2545/linux.git
+[ec2-user@ip-172-31-33-119 linux]$ git push -u origin master
+Username for 'https://github.com': saif2545
+Password for 'https://saif2545@github.com':
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 1.28 KiB | 1.28 MiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Saif2545/linux.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+[ec2-user@ip-172-31-33-119 linux]$ git branch
+* master
+[ec2-user@ip-172-31-33-119 linux]$ git checkout -b trial
+Switched to a new branch 'trial'
