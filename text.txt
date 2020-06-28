@@ -101,3 +101,61 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 * master
 [ec2-user@ip-172-31-33-119 linux]$ git checkout -b trial
 Switched to a new branch 'trial'
+
+
+--------------------------------------------------------------
+[ec2-user@ip-172-31-33-119 linux]$ nano text.txt
+[ec2-user@ip-172-31-33-119 linux]$ nano text.txt
+[ec2-user@ip-172-31-33-119 linux]$ git add .
+[ec2-user@ip-172-31-33-119 linux]$ git commit -m" text edited for trila branch"
+[trial 9f6a3cf]  text edited for trila branch
+ Committer: EC2 Default User <ec2-user@ip-172-31-33-119.us-east-2.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 40 insertions(+)
+[ec2-user@ip-172-31-33-119 linux]$ git push -u origin trial
+Username for 'https://github.com': saif2545
+Password for 'https://saif2545@github.com':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 806 bytes | 806.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'trial' on GitHub by visiting:
+remote:      https://github.com/Saif2545/linux/pull/new/trial
+remote:
+To https://github.com/Saif2545/linux.git
+ * [new branch]      trial -> trial
+Branch 'trial' set up to track remote branch 'trial' from 'origin'.
+[ec2-user@ip-172-31-33-119 linux]$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+[ec2-user@ip-172-31-33-119 linux]$ git branch
+* master
+  trial
+[ec2-user@ip-172-31-33-119 linux]$ git merge trial
+Updating ae9d25c..9f6a3cf
+Fast-forward
+ text.txt | 40 ++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 40 insertions(+)
+[ec2-user@ip-172-31-33-119 linux]$ git push
+Username for 'https://github.com': saif2545
+Password for 'https://saif2545@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/Saif2545/linux.git
+   ae9d25c..9f6a3cf  master -> master
+[ec2-user@ip-172-31-33-119 linux]$ git checkout trial
+Switched to branch 'trial'
+Your branch is up to date with 'origin/trial'.
